@@ -13,5 +13,5 @@ keywords = ["u256", "proc-macro", "literals", "ethereum"]
 proc-macro = true
 
 [dependencies]
-syn = "1.0"
-primitive-types = { version = "0.12", default-features = false }
+syn = "2.0.98"
+web3 = { git = "https://github.com/avxor/rust-web3", rev = "6efb039" }

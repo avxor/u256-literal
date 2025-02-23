@@ -16,10 +16,10 @@
 //! # }
 //! ```
 
-use primitive_types::U256;
 use proc_macro::TokenStream;
 use std::str::FromStr;
 use syn::{parse_macro_input, Lit};
+use web3::types::U256;
 
 #[proc_macro]
 pub fn u256(input: TokenStream) -> TokenStream {
@@ -31,7 +31,7 @@ pub fn u256(input: TokenStream) -> TokenStream {
     };
 
     format!(
-        "primitive_types::U256([{}u64, {}u64, {}u64, {}u64])",
+        "web3::types::U256([{}u64, {}u64, {}u64, {}u64])",
         number.0[0], number.0[1], number.0[2], number.0[3]
     )
     .parse()

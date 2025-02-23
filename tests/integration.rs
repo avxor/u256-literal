@@ -1,5 +1,5 @@
-use primitive_types::U256;
 use u256_literal::u256;
+use web3::types::U256;
 
 #[test]
 fn test_integer() {
